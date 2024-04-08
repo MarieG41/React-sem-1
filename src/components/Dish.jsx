@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Menu( {name, img, price} ) {
+export default function Dish( {name, img, price} ) {
     return (
         <main>
             <h3>{name}</h3>
