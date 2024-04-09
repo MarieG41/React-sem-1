@@ -1,8 +1,10 @@
 import React from "react";
 import Card from 'react-bootstrap/Card'
 import '../assets/styles/dish.css'
+import { Link } from "react-router-dom";
 
-export default function Dish( {name, img, price} ) {
+
+export default function Dish( {name, img, price, slug} ) {
     return (
         <div className="main--div-dish">
             <Card>
@@ -12,6 +14,9 @@ export default function Dish( {name, img, price} ) {
                     <Card.Text>
                         {price}€
                     </Card.Text>
+                    <Card.Link>
+                        <Link to={slug}>Détails</Link>
+                    </Card.Link>
                 </Card.Body>
             </Card>
         </div>
