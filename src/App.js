@@ -3,7 +3,7 @@ import './App.css';
 import Home from "./pages/Home"
 import {Route, Routes} from "react-router-dom"
 import Layout from './components/Layout';
-import DishDetails from './components/DishDetails';
+import DishDetails from './pages/DishDetails';
 
 function App() {
   return (
