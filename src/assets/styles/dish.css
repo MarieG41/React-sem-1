@@ -1,7 +1,8 @@
 .main--div-dish {
-    padding: 50px 0;
+    padding-block: 50px;
 }
 
 .dish-img {
     height: 250px;
+    object-fit: cover;
 }
