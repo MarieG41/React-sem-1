@@ -12,7 +12,7 @@ function App() {
         <Routes>
           <Route element={<Layout />}>
             <Route index element={<Home/>} />
-            <Route path='plat/:slug' element={<DishDetails />} />
+            <Route path='/plat/:slug' element={<DishDetails />} />
             <Route path='*' element={<NotFound />} />
           </Route>
         </Routes>
