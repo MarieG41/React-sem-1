@@ -7,15 +7,11 @@ import Layout from './components/Layout';
 function App() {
   return (
     <div>
-      <Header />
-      <main>
         <Routes>
           <Route element={<Layout />}>
             <Route index element={<Home/>} />
           </Route>
         </Routes>
-      </main>
-      <Footer />
     </div>
   );
 }
