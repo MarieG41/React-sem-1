@@ -10,7 +10,6 @@ export default function DishDetails() {
             <Container>
                 <Row><h1>Slug: {slug}</h1></Row>
             </Container>
-            
         </div>
     )
 }
