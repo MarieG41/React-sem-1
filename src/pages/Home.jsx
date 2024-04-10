@@ -13,9 +13,8 @@ export default function Home() {
         setShowNewOnly(!showNewOnly)
     }
     
-    useEffect = (() => {
+    useEffect(() => {
         const filteredDishes = showNewOnly ? DishesDatas.filter((dish) => dish.isNew) : DishesDatas;
-        console.log(filteredDishes);
         setDishes(filteredDishes)
     }, [showNewOnly]);
 
@@ -23,9 +22,16 @@ export default function Home() {
         <>
         <Container>
            <Button variant="primary" onClick={handleShowNewOnly}> {showNewOnly ? ("Voir tous les plats") : ("Nouveauté uniquement") }</Button>
-            <Stack direction="horizontal" gap={3} className="justify-content-md-center">
+            <Stack direction="horizontal" gap={3} className="justify-content-lg-center">
                 {dishes.length > 0 && dishes.map((dish, index) => (
-                    <Dish key={index} name={dish.name}/>
+                    <Dish 
+                        key={index} 
+                        name={dish.name}
+                        img={dish.img}
+                        price={dish.price}
+                        slug={dish.slug}
+                        isNew={dish.isNew}
+                    />
                 ))}                 
             </Stack>
         </Container>
