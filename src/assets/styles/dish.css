@@ -3,7 +3,7 @@
     object-fit: cover;
 }
 
-.badge {
+.card .badge {
     position: absolute;
     top: 10px;
     right: 10px;
