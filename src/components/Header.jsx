@@ -11,7 +11,7 @@ export default function Header() {
         <header>
             <Navbar className="bg-body-tertiary">
                 <Container>
-                    <NavLink to="/" className={"navbar.brand"}>
+                    <NavLink to="/" className={"navbar-brand"}>
                         <img
                         src={logo} 
                         className="d-inline-block align-top logo"
