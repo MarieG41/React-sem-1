@@ -12,7 +12,3 @@ a.nav-link.active {
     cursor: pointer;
     text-decoration: underline;
 }
-
-nav-bar.brand.active {
-    text-decoration: underline;
-}
