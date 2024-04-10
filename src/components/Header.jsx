@@ -4,22 +4,24 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import logo from '../assets/images/logo.webp'
 import '../assets/styles/header.css'
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
     return (
         <header>
             <Navbar className="bg-body-tertiary">
                 <Container>
-                    <Navbar.Brand href="/">
+                    <NavLink to="/" className={"navbar-brand"}>
                         <img
                         src={logo} 
                         className="d-inline-block align-top logo"
                         alt="un mexicain qui joue de la guitare"
                         />
-                    </Navbar.Brand>
+                    </NavLink>
                     <Navbar.Collapse className="justify-content-end">
                         <Nav>
-                            <Nav.Link href="/">Accueil</Nav.Link>
+                            <NavLink to="/" className={"nav-link"}>Accueil</NavLink>
+                            <NavLink to="/a-propos" className={"nav-link"}>A propos</NavLink>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
