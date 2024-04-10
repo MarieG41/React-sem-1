@@ -3,7 +3,6 @@ import Card from 'react-bootstrap/Card'
 import '../assets/styles/dish.css'
 import { Link } from "react-router-dom";
 
-
 export default function Dish( {name, img, price, slug} ) {
     return (
         <div className="main--div-dish">
