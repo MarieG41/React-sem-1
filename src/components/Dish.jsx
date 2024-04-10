@@ -8,8 +8,8 @@ export default function Dish({ name, img, price, slug, isNew }) {
     return (
         <div className="main--div-dish">
             <Link to={`plat/${slug}`}><Card>
-                {isNew && <Badge bg="primary">Nouveau</Badge>}
                 <Card.Img variant="top" className="dish-img" src={img} alt={name}/>
+                {isNew && <Badge bg="primary">Nouveau</Badge>}
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
                         <Card.Text>
