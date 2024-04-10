@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Badge from 'react-bootstrap/Badge';
 
 export default function Dish({ name, img, price, slug, isNew }) {
+    console.log(name);
     return (
         <div className="main--div-dish">
             <Link to={`plat/${slug}`}><Card>
