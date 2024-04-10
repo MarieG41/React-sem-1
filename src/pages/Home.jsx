@@ -22,7 +22,7 @@ export default function Home() {
     return (
         <>
         <Container>
-           <Button variant="primary" onClick={handleShowNewOnly}> {showNewOnly ? ("Nouveauté uniquement") : ("Voir tous les plats")}</Button>
+           <Button variant="primary" onClick={handleShowNewOnly}> {showNewOnly ? ("Voir tous les plats") : ("Nouveauté uniquement") }</Button>
             <Stack direction="horizontal" gap={3} className="justify-content-md-center">
                 {filteredDishes.map((dish, index) => (
                     <Dish key={index} {...dish}/>
