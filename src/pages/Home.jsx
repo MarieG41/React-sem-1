@@ -1,8 +1,5 @@
 import React from 'react';
 import Dish from '../components/Dish';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Stack from 'react-bootstrap/Stack'
 
 export default function Home() {
