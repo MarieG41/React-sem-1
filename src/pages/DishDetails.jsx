@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams} from "react-router-dom"
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import DishesDatas from '../datas/dishes.json'
 import Button from 'react-bootstrap/Button';
+import { CartContext } from '../utils/context/CartContext'
 
-export default function DishDetails({addToCart}) {
+export default function DishDetails() {
     const { slug } = useParams()
     const [ dish, setDish ] = useState(null)
-
+    const { addToCart } = useContext(CartContext)
     useEffect(() => {
         const currentDish = DishesDatas.find((dish) => dish.slug === slug)
         setDish(currentDish)
