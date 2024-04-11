@@ -17,9 +17,9 @@ export default function DishDetails() {
     return (
         <div>
             <Container>
-                <Row>
+                {dish ? (<Row>
                     <Col>
-                        <img src={dish.img} alt={dish.name} />
+                        <img src={dish.img} alt={dish.name} className="mw-100"/>
                     </Col>
                     <Col>
                         <h1>{dish.name}</h1>
@@ -27,7 +27,11 @@ export default function DishDetails() {
                         <p>{dish.price}€</p>
                         <Button variant="primary">Commander</Button>
                     </Col>
-                </Row>
+                </Row>) :
+                (<Row>
+                    <p>Chargement de la page</p>
+                </Row>)}
+                
             </Container>
         </div>
     )
