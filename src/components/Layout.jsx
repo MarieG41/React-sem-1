@@ -3,10 +3,10 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { Outlet } from "react-router-dom"
 
-export default function Layout({cart}) {
+export default function Layout() {
     return (
         <>
-            <Header cart={cart}/>
+            <Header/>
             <main>
                 <Outlet />
             </main>

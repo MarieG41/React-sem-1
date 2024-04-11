@@ -1,8 +1,11 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Table from 'react-bootstrap/Table';
+import { CartContext } from '../utils/context/CartContext'
+import { useContext } from 'react';
 
-export default function Cart({cart}) {
+export default function Cart() {
+    const { cart } = useContext(CartContext)
     return (
         <Container>
             <Row>
@@ -13,6 +16,7 @@ export default function Cart({cart}) {
                 <tr>
                     <th>Nom</th>
                     <th>Prix</th>
+                    <th>Quantité</th>
                 </tr>
             </thead>
             <tbody>
@@ -20,6 +24,7 @@ export default function Cart({cart}) {
                 <tr key={index}>
                     <td>{product.name}</td>
                     <td>{product.price}</td>
+                    <td>{product.quantity}</td>
                 </tr>))}
             </tbody>
             </Table>
