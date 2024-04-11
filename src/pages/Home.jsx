@@ -30,6 +30,7 @@ export default function Home() {
                         img={dish.img}
                         price={dish.price}
                         slug={dish.slug}
+                        description={dish.description}
                         isNew={dish.isNew}
                     />
                 ))}                 
