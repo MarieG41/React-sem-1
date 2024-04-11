@@ -5,12 +5,19 @@ import { CartContext } from '../utils/context/CartContext'
 import { useContext } from 'react';
 import useTotalQuantity from '../utils/hooks/useTotalQuantity';
 import useTotalPrice from '../utils/hooks/useTotalPrice';
+import {Helmet} from "react-helmet";
 
 export default function Cart() {
     const { cart } = useContext(CartContext)
     const totalPrice = useTotalPrice()
     const totalQuantity = useTotalQuantity()
     return (
+        <>
+        <head>
+                <Helmet>
+                    <title>Panier</title>
+                </Helmet>
+        </head>
         <Container>
             <Row>
                 <h1>Panier</h1>
@@ -35,5 +42,6 @@ export default function Cart() {
             <p className='text-end'>{totalQuantity} éléments dans le panier</p>
             <p className='text-end'>Prix Total: {totalPrice}€</p>
         </Container>
+        </>
     )
 }
