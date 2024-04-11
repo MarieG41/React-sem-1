@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 import DishesDatas from '../datas/dishes.json'
 import Button from 'react-bootstrap/Button';
 
-export default function DishDetails() {
+export default function DishDetails({addToCart}) {
     const { slug } = useParams()
     const [ dish, setDish ] = useState(null)
 
@@ -25,7 +25,7 @@ export default function DishDetails() {
                         <h1>{dish.name}</h1>
                         <p>{dish.description}</p>
                         <p>{dish.price}€</p>
-                        <Button variant="primary">Commander</Button>
+                        <Button variant="primary" onClick={() => addToCart(dish)}>Commander</Button>
                     </Col>
                 </Row>) :
                 (<Row>
