@@ -1,14 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams} from "react-router-dom"
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import DishesDatas from '../datas/dishes.json'
+import Button from 'react-bootstrap/Button';
 
 export default function DishDetails() {
     const { slug } = useParams()
+    const [ dish, setDish ] = useState(null)
+
+    useEffect(() => {
+        const currentDish = DishesDatas.find((dish) => dish.slug === slug)
+        setDish(currentDish)
+    }, [slug])
     return (
         <div>
             <Container>
-                <Row><h1>Slug: {slug}</h1></Row>
+                <Row>
+                    <Col>
+                        <img src={dish.img} alt={dish.name} />
+                    </Col>
+                    <Col>
+                        <h1>{dish.name}</h1>
+                        <p>{dish.description}</p>
+                        <p>{dish.price}€</p>
+                        <Button variant="primary">Commander</Button>
+                    </Col>
+                </Row>
             </Container>
         </div>
     )
