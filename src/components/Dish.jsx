@@ -7,16 +7,18 @@ import Badge from 'react-bootstrap/Badge';
 export default function Dish({ name, img, price, slug, isNew }) {
     return (
         <div className="main--div-dish">
-            <Link to={`plat/${slug}`}><Card>
-                <Card.Img variant="top" className="dish-img" src={img} alt={name}/>
-                {isNew && <Badge bg="primary">Nouveau</Badge>}
-                    <Card.Body>
-                        <Card.Title>{name}</Card.Title>
-                        <Card.Text>
-                            {price}€
-                        </Card.Text>
-                </Card.Body>
-            </Card></Link>
+            <Link to={`plat/${slug}`}>
+                <Card>
+                    {isNew && <Badge bg="primary p-2">Nouveau</Badge>}
+                    <Card.Img variant="top" className="dish-img" src={img} alt={name}/>
+                        <Card.Body>
+                            <Card.Title>{name}</Card.Title>
+                            <Card.Text>
+                                {price}€
+                            </Card.Text>
+                    </Card.Body>
+                </Card>
+            </Link>
         </div>
     )
 }
