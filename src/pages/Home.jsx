@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import { useState, useEffect } from 'react';
 import DishesDatas from '../datas/dishes.json'
+import {Helmet} from "react-helmet";
 
 export default function Home() {
     const [ showNewOnly, setShowNewOnly ] = useState(false)
@@ -20,6 +21,9 @@ export default function Home() {
 
     return (
         <>
+        <Helmet>
+            <title>Mexican Food</title>
+        </Helmet>
         <Container>
            <Button variant="primary" onClick={handleShowNewOnly}> {showNewOnly ? ("Voir tous les plats") : ("Nouveauté uniquement") }</Button>
             <Stack direction="horizontal" gap={3} className="justify-content-lg-center">

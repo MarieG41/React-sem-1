@@ -14,7 +14,6 @@ export default function Cart() {
     return (
         <>
             <Helmet>
-                <meta charset="utf-8" />
                 <title>Panier</title>
             </Helmet>
         <Container>

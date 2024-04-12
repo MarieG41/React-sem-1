@@ -7,7 +7,6 @@ export default function NotFound() {
     return (
         <>
             <Helmet>
-                <meta charset="utf-8" />
                 <title>Page non trouvée</title>
             </Helmet>
             <div>
