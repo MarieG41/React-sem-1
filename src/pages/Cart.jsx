@@ -13,11 +13,10 @@ export default function Cart() {
     const totalQuantity = useTotalQuantity()
     return (
         <>
-        <head>
-                <Helmet>
-                    <title>Panier</title>
-                </Helmet>
-        </head>
+            <Helmet>
+                <meta charset="utf-8" />
+                <title>Panier</title>
+            </Helmet>
         <Container>
             <Row>
                 <h1>Panier</h1>

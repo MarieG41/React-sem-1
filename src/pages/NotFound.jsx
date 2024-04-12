@@ -6,11 +6,10 @@ import {Helmet} from "react-helmet";
 export default function NotFound() {
     return (
         <>
-            <head>
-                <Helmet>
-                    <title>Page non trouvée</title>
-                </Helmet>
-            </head>
+            <Helmet>
+                <meta charset="utf-8" />
+                <title>Page non trouvée</title>
+            </Helmet>
             <div>
                 <Container>
                     <Row><h1>Page non trouvée</h1></Row>

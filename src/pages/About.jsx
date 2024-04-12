@@ -6,11 +6,10 @@ import {Helmet} from "react-helmet";
 export default function About() {
     return (
         <>
-            <head>
-                <Helmet>
-                    <title>A propos</title>
-                </Helmet>
-            </head>
+            <Helmet>
+                <meta charset="utf-8" />
+                <title>A propos</title>
+            </Helmet>
             <Container>
                 <main className="main--div-dish">
                     <section>

@@ -18,11 +18,10 @@ export default function DishDetails() {
     }, [slug])
     return (
         <>
-            <head>
-                <Helmet>
-                    <title>{DishesDatas.name}</title>
-                </Helmet>
-            </head>
+            <Helmet>
+                <meta charset="utf-8" />
+                <title>{DishesDatas.name}</title>
+            </Helmet>
             <div>
                 <Container>
                     {dish ? (<Row>
