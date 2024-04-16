@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -11,11 +11,15 @@ import { Helmet } from "react-helmet";
 export default function DishDetails() {
     const { slug } = useParams()
     const [dish, setDish] = useState(null)
+    const navigate = useNavigate()
     const { addToCart } = useContext(CartContext)
     useEffect(() => {
         const currentDish = DishesDatas.find((dish) => dish.slug === slug)
+        if(!currentDish) {
+            navigate("/plat-non-trouve")
+        }
         setDish(currentDish)
-    }, [slug])
+    }, [slug, navigate])
     return (
         <>
             <div>
